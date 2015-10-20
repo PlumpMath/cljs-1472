@@ -4,9 +4,8 @@
 
 (let [start (System/nanoTime)]
   (b/build "src"
-    {:main 'cljs-1472.core
-     :output-to "out/cljs_1472.js"
-     :output-dir "out"
+    {:output-to "out/cljs_1472.js"
+     :target :nodejs
      :verbose true})
   (println "... done. Elapsed" (/ (- (System/nanoTime) start) 1e9) "seconds"))
 
